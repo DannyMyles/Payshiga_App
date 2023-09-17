@@ -23,7 +23,7 @@ export const DisplayImage: React.FC<TestProps> = ( { navigation } ) => {
           <View style={{marginBottom: 10, opacity: 0.5}} >
           <Text style={{ color: "white"}}> Or Customize</Text>
           </View>
-          <View style={{ flexWrap:'wrap',flexDirection: 'row',  gap: 10, width: '100%'}}>
+          <View style={{ flexWrap:'wrap',flexDirection: 'row',  gap: 40, width: '100%'}}>
             <View style={{backgroundColor: '#4B92F7', width: 50, height:50, borderRadius: 30}}></View>
             <View style={{backgroundColor: '#75E6C0', width: 50, height:50, borderRadius: 30}}></View>
             <View style={{backgroundColor: '#EB5149', width: 50, height:50, borderRadius: 30}}></View>
