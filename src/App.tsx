@@ -19,7 +19,7 @@ const App: React.FC = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Dashboard" screenOptions={{ headerShown: false}}>
+      <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false}}>
         <Stack.Screen name='Home' component={Home} />
         <Stack.Screen name='Referrel' component={Rereferal} />
         <Stack.Screen name='Test' component={TestAssessment} />

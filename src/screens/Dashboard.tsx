@@ -8,17 +8,16 @@ interface TestProps {
 
 export const Dashboard: React.FC<TestProps> = ( { navigation } ) => {
     const handleContinueOnPress = () => {
-        // navigation.navigate('CodeConfirmation')
   }
     return (
       <View style={styles.container}>
-          <View style={{ width: '100%' }}>
+          <View style={{ width: '100%', display: 'flex',justifyContent:'flex-start', flexDirection:'row', gap:5 }}>
             <View style={{backgroundColor: '#FFC8DD', width: 30, height:30, borderRadius: 30}}>
               <Text style={{ color: "black", fontSize: 16, opacity: 0.5, textAlign:'center', fontWeight: 'bold'}}>CC</Text>
             </View>
-            <Text style={{ color: "white", fontSize: 20, fontWeight: "bold"}}>Home</Text>
+            <Text style={{ color: "white", fontSize: 24, fontWeight: "bold"}}>Home</Text>
           </View>
-        <View style={{ backgroundColor: '#171819', width: '100%', borderRadius:20, display: 'flex', justifyContent: 'space-between' }}>
+        <View style={{ backgroundColor: '#171819', width: '100%', borderRadius:20, display: 'flex', justifyContent: 'space-between', padding:20 }}>
           <View style={{}}>
           <Text style={{ color: "white", fontSize: 20, fontWeight: "bold"}}>NGN Balance</Text>
           <Text style={{ color: "white", fontSize: 20, fontWeight: "bold"}}>₦95,800.05</Text>
@@ -38,15 +37,17 @@ export const Dashboard: React.FC<TestProps> = ( { navigation } ) => {
             </View>
           </View>
 
-          <View style={{ backgroundColor: '#171819', width: '100%',display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexDirection: 'row', marginTop: 10 }}>
-              <View>
+        </View>
+          <View  style={{display: 'flex', justifyContent:'space-between', flexDirection:'row', width: '100%', gap:10}}>
+          <View style={{backgroundColor: '#171819', padding: 20, borderRadius: 30,}}>
                  <Text style={{ color: "white", fontSize: 20, fontWeight: "bold"}}>Bank Account</Text>
+                 <Text style={{ color: "white", fontSize: 18, marginBottom: 10, opacity: 0.5  }}>Show account info</Text>
               </View>
-              <View>
-                 <Text style={{ color: "white", fontSize: 20, fontWeight: "bold"}}>Pay Bills</Text>
+              <View style={{backgroundColor: '#171819', padding: 20, borderRadius: 30 }}>
+                 <Text style={{ color: "white", fontSize: 20, fontWeight: "bold", borderRadius: 30}}>Pay Bills</Text>
+                 <Text style={{ color: "white", fontSize: 18, marginBottom: 10, opacity: 0.5  }}>Top-Up & utilities</Text>
               </View>
           </View>
-        </View>
 
 
         <View style={{ display: "flex", width: "100%", flexDirection: "row", justifyContent: "space-between", marginTop: 40}} >
@@ -71,7 +72,6 @@ const styles = StyleSheet.create({
       borderRadius: 30,
       width: 150,
       borderWidth: 1,
-      borderColor: 'white',
       paddingVertical: 15,
       paddingHorizontal: 30,
       marginVertical: 10,
