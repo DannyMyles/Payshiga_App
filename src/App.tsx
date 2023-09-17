@@ -10,12 +10,16 @@ import PhoneCodeSent from './screens/PhoneCodeSent';
 import ConfrimCodeReceived from './screens/ConfrimCodeReceived';
 import CountryResidence from './screens/CountryResidence';
 import CreateShigaID from './screens/CreateShigaID';
+import CreateShigaIDII from './screens/CreateShigaIDII';
+import DisplayImage from './screens/DisplayImage';
+import UploadImage from './screens/UploadImage';
+import Dashboard from './screens/Dashboard';
 const App: React.FC = () => {
   const Stack = createNativeStackNavigator();
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false}}>
+      <Stack.Navigator initialRouteName="Dashboard" screenOptions={{ headerShown: false}}>
         <Stack.Screen name='Home' component={Home} />
         <Stack.Screen name='Referrel' component={Rereferal} />
         <Stack.Screen name='Test' component={TestAssessment} />
@@ -23,6 +27,10 @@ const App: React.FC = () => {
         <Stack.Screen name='CodeConfirmation' component={ConfrimCodeReceived} />
         <Stack.Screen name='CountryResidence' component={CountryResidence} />
         <Stack.Screen name='CreateShigaID' component={CreateShigaID} />
+        <Stack.Screen name='CreateShigaIDII' component={CreateShigaIDII} />
+        <Stack.Screen name='DispalayImage' component={DisplayImage} />
+        <Stack.Screen name='UploadImage' component={UploadImage} />
+        <Stack.Screen name='Dashboard' component={Dashboard} />
       </Stack.Navigator>
     </NavigationContainer>
   );

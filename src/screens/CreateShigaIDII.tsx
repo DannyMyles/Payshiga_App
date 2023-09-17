@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native'
 import React, { Component } from 'react'
-import { CreateShigaIDNavigationProp } from '../types/types';
+import { CreateShigaIDIINavigationProp} from '../types/types';
 
 interface TestProps {
-  navigation: CreateShigaIDNavigationProp 
+  navigation: CreateShigaIDIINavigationProp 
 }
 
-export const CreateShigaID: React.FC<TestProps> = ( { navigation } ) => {
+export const CreateShigaIDII: React.FC<TestProps> = ( { navigation } ) => {
     const handleContinueOnPress = () => {
-        navigation.navigate('CreateShigaIDII')
+        navigation.navigate('DispalayImage')
   }
     return (
       <View style={styles.container}>
@@ -18,12 +18,12 @@ export const CreateShigaID: React.FC<TestProps> = ( { navigation } ) => {
         <View style={{ display: "flex", width: "100%", flexDirection: "row",alignItems: "center",}}>
         <TextInput placeholder={`@`} placeholderTextColor="#454647" keyboardType="phone-pad" style={{ fontSize: 20, color: "white" }}>
         </TextInput>
-        <Text style={{ color: "#FFFFFF", fontSize: 18, fontWeight: "bold"}}>Chiefcee </Text>
+        <Text style={{ color: "#FFFFFF", fontSize: 18, fontWeight: "bold"}}>hushpuppi </Text>
         </View>
         </View>
 
         <View style={{ display: "flex", width: "100%", flexDirection: "row", justifyContent: "space-between", marginTop: 40}} >
-          <TouchableOpacity style={{...styles.buttonStyle, backgroundColor: "#323670", width:300, justifyContent: 'center'}} onPress={handleContinueOnPress}>
+          <TouchableOpacity style={{...styles.buttonStyle, backgroundColor: "#6771FF", width:300, justifyContent: 'center'}} onPress={handleContinueOnPress}>
             <Text style={{...styles.btnTextStyle, color: "white"}}>Continue</Text>
           </TouchableOpacity>
         </View>
@@ -55,4 +55,4 @@ const styles = StyleSheet.create({
     },
   });
 
-  export default CreateShigaID
+  export default CreateShigaIDII

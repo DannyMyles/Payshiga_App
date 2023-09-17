@@ -9,7 +9,11 @@ export type RootStackParamList = {
     CodeConfirmation: undefined,
     PhoneCodeSent: undefined,
     CountryResidence: undefined,
-    CreateShigaID: undefined
+    CreateShigaID: undefined,
+    CreateShigaIdII: undefined,
+    DisplayImage: undefined,
+    UploadImage: undefined,
+    Dashboard:undefined
   };
 
 export type HomeScreenRouteProp = RouteProp<RootStackParamList, 'Home'>;
@@ -32,6 +36,18 @@ export type CountryResidenceNavigationProp = StackNavigationProp<RootStackParamL
 
 export type CreateShigaIDScreenRouteProp = RouteProp<RootStackParamList, 'CreateShigaID'>;
 export type CreateShigaIDNavigationProp = StackNavigationProp<RootStackParamList, 'CreateShigaID'>; 
+
+export type CreateShigaIDIIScreenRouteProp = RouteProp<RootStackParamList, 'CreateShigaIdII'>;
+export type CreateShigaIDIINavigationProp = StackNavigationProp<RootStackParamList, 'CreateShigaIdII'>;
+
+export type DisplayImageScreenRouteProp = RouteProp<RootStackParamList, 'DisplayImage'>;
+export type DisplayImageNavigationProp = StackNavigationProp<RootStackParamList, 'DisplayImage'>; 
+
+export type UploadImageScreenRouteProp = RouteProp<RootStackParamList, 'UploadImage'>;
+export type UploadImageNavigationProp = StackNavigationProp<RootStackParamList, 'UploadImage'>; 
+
+export type DashboardScreenRouteProp = RouteProp<RootStackParamList, 'UploadImage'>;
+export type DashboardNavigationProp = StackNavigationProp<RootStackParamList, 'UploadImage'>; 
 
 export type HomeScreenProps = {
     route: HomeScreenRouteProp;
@@ -67,4 +83,24 @@ export type CountryResidenceScreenProps = {
 export type CreateShigaIDScreenProps = {
   route: CreateShigaIDScreenRouteProp;
   navigation: CreateShigaIDNavigationProp;
+};
+
+export type CreateShigaIDIIScreenProps = {
+  route: CreateShigaIDIIScreenRouteProp;
+  navigation: CreateShigaIDIINavigationProp;
+};
+
+export type DisplayImageScreenProps = {
+  route: DisplayImageScreenRouteProp;
+  navigation: DisplayImageNavigationProp;
+};
+
+export type UploadImageScreenProps = {
+  route: UploadImageScreenRouteProp;
+  navigation: UploadImageNavigationProp;
+};
+
+export type DashboardScreenProps = {
+  route: DashboardScreenRouteProp;
+  navigation: DashboardNavigationProp;
 };
