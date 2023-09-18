@@ -14,6 +14,7 @@ import CreateShigaIDII from './screens/CreateShigaIDII';
 import DisplayImage from './screens/DisplayImage';
 import UploadImage from './screens/UploadImage';
 import Dashboard from './screens/Dashboard';
+import Address from './screens/Address';
 const App: React.FC = () => {
   const Stack = createNativeStackNavigator();
 
@@ -31,6 +32,7 @@ const App: React.FC = () => {
         <Stack.Screen name='DispalayImage' component={DisplayImage} />
         <Stack.Screen name='UploadImage' component={UploadImage} />
         <Stack.Screen name='Dashboard' component={Dashboard} />
+        <Stack.Screen name='Address' component={Address} />
       </Stack.Navigator>
     </NavigationContainer>
   );

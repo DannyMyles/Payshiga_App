@@ -14,14 +14,12 @@ import {
   FlatList,
   SafeAreaView,
 } from 'react-native';
-import { HomeScreenNavigationProp, HomeScreenProps, ReferrelScreenNavigationProp, TestAssessmentScreenNavigationProp } from '../types/types';
+import { TestAssessmentScreenNavigationProp } from '../types/types';
 
-import allCountryCodes from '../utils/allCountryCodes';
+import allAdresses from '../utils/allAdresses';
 
 export type ItemData = {
-  name: string;
-  code: string;
-  flag: string
+  adress: string;
 };
 
 type ItemProps = {
@@ -35,12 +33,12 @@ interface CountriesModalProps {
   navigation: TestAssessmentScreenNavigationProp
 }
 
-const CountriesModal: React.FC<CountriesModalProps> = ({isVisible, onClose, navigation }) => {
-  const DATA = allCountryCodes
+const AddressModal: React.FC<CountriesModalProps> = ({isVisible, onClose, navigation }) => {
+  const DATA = allAdresses
   const handleUnderstandPress = () => {navigation.navigate('Referrel')
   };
 
-  const showCountriesList = () => {
+  const showAddress = () => {
 
   }
 
@@ -51,11 +49,7 @@ const CountriesModal: React.FC<CountriesModalProps> = ({isVisible, onClose, navi
   const Item = ({item, onPress }: ItemProps) => (
     <TouchableOpacity onPress={onPress} style={{marginVertical: 6, padding: 10}}>
       <View style={{ display: "flex", flexDirection: "row", justifyContent: "flex-start", alignItems: "center"}}>
-        <View style={{ borderRadius: 50, display: "flex", justifyContent: "center", alignItems: "center", padding: 10, borderColor: "#fff5", borderWidth: 2, marginRight: 15 }}>
-          <Text style={{ fontSize: 25}}>{item.flag}</Text>
-        </View>
-        <Text style={{color: "white", fontWeight: "bold", fontSize: 18, marginRight: 15}}>{item.name}</Text>
-        <Text style={{color: "white", opacity: 0.5, fontSize: 18}}>{item.code}</Text>
+        <Text style={{color: "white", fontWeight: "bold", fontSize: 18, marginRight: 15}}>{item.adress}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -95,12 +89,12 @@ const CountriesModal: React.FC<CountriesModalProps> = ({isVisible, onClose, navi
             </View>
             <View>
             
-            <TouchableWithoutFeedback onPress={showCountriesList}>
+            <TouchableWithoutFeedback onPress={showAddress}>
               <TextInput placeholder={`Tap the Search bar`} placeholderTextColor="#454647" inputMode='text' style={{ fontSize: 20, color: "white" }}></TextInput>
             </TouchableWithoutFeedback>
               <FlatList data={DATA}
                 renderItem={renderItem}
-                keyExtractor={item => item.name}/>
+                keyExtractor={item => item.adress}/>
             </View>
           </View>
         </View>
@@ -156,4 +150,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CountriesModal;
+export default AddressModal;

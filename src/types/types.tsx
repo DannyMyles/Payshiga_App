@@ -13,7 +13,8 @@ export type RootStackParamList = {
     CreateShigaIdII: undefined,
     DisplayImage: undefined,
     UploadImage: undefined,
-    Dashboard:undefined
+    Dashboard:undefined,
+    Address: undefined
   };
 
 export type HomeScreenRouteProp = RouteProp<RootStackParamList, 'Home'>;
@@ -49,6 +50,8 @@ export type UploadImageNavigationProp = StackNavigationProp<RootStackParamList, 
 export type DashboardScreenRouteProp = RouteProp<RootStackParamList, 'UploadImage'>;
 export type DashboardNavigationProp = StackNavigationProp<RootStackParamList, 'UploadImage'>; 
 
+export type AddresscreenRouteProp = RouteProp<RootStackParamList, 'UploadImage'>;
+export type AddressNavigationProp = StackNavigationProp<RootStackParamList, 'UploadImage'>;
 export type HomeScreenProps = {
     route: HomeScreenRouteProp;
     navigation: HomeScreenNavigationProp;
@@ -103,4 +106,9 @@ export type UploadImageScreenProps = {
 export type DashboardScreenProps = {
   route: DashboardScreenRouteProp;
   navigation: DashboardNavigationProp;
+};
+
+export type AddressScreenProps = {
+  route: AddresscreenRouteProp;
+  navigation: AddressNavigationProp;
 };

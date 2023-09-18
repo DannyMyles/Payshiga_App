@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: 'blue',
   },
-  iconStyle: {height: 25, width: 25, backgroundColor: 'white'},
+  iconStyle: {height: 25, width: 25, backgroundColor: 'white', opacity: 1,borderRadius: 20 },
   buttonStyle: {
     borderRadius: 30,
     width: 250,

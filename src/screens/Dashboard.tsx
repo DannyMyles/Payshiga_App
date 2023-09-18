@@ -8,6 +8,7 @@ interface TestProps {
 
 export const Dashboard: React.FC<TestProps> = ( { navigation } ) => {
     const handleContinueOnPress = () => {
+      navigation.navigate('Address')
   }
     return (
       <View style={styles.container}>
