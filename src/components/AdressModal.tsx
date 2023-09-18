@@ -35,8 +35,6 @@ interface CountriesModalProps {
 
 const AddressModal: React.FC<CountriesModalProps> = ({isVisible, onClose, navigation }) => {
   const DATA = allAdresses
-  const handleUnderstandPress = () => {navigation.navigate('Referrel')
-  };
 
   const showAddress = () => {
 
